@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-readonly target=${1}
+readonly target=${1:-lib:senseair-s8}
 readonly executable=${2:-}
 
 if [[ -n $executable ]]

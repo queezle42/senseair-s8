@@ -32,6 +32,7 @@ common shared-properties
     -Wno-unsafe
     -Werror=incomplete-patterns
     -Werror=missing-fields
+    -Werror=missing-home-modules
     -Werror=missing-methods
 
 common shared-executable-properties
@@ -45,8 +46,14 @@ library
   exposed-modules:
     SenseairS8
   other-modules:
+    Data.Digest.CRC16
   build-depends:
+    array,
     base,
+    binary,
+    bytestring,
+    serial,
+    unix,
   hs-source-dirs:
     src
 
